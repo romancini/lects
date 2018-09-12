@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.SelecaoAtividadeActivity"></activity>
+        <activity android:name=".ui.activity.SelectLessonActivity" />
+        <activity android:name=".ui.activity.LearningObjActivity"></activity>
     </application>
 
 </manifest>
