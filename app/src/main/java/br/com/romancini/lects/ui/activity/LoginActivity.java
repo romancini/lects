@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.romancini.lects.R;
+import br.com.romancini.lects.model.Login;
 import br.com.romancini.lects.model.User;
 import br.com.romancini.lects.retrofit.RetrofitInicializer;
 import retrofit2.Call;
@@ -45,15 +46,15 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void validateLogin(String email, String password) {
-        User login = new User(email, password);
-        Call call = new RetrofitInicializer().getToken().login(login);
+        Login login = new Login(email, password);
+        Call call = new RetrofitInicializer().userService().login(login);
         call.enqueue(new Callback() {
             @Override
             public void onResponse(Call call, Response response) {
                 if (response.isSuccessful()) {
-                    Log.i("Login", response.toString());
-                    Intent intent = new Intent(LoginActivity.this, SelectLessonActivity.class);
-                    startActivity(intent);
+                    Log.i("Login", response.headers().toString());
+                    //Intent intent = new Intent(LoginActivity.this, SelectLessonActivity.class);
+                    //startActivity(intent);
                 } else {
                     Log.i("Login", "Aviso: " + response.toString());
                     Toast.makeText(LoginActivity.this, "Verifique e-mail e senha", Toast.LENGTH_SHORT).show();

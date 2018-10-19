@@ -23,20 +23,6 @@ public class SelectLessonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_select_lesson);
 
         setTitle(TITLE_APPBAR);
-
-        Call call = new RetrofitInicializer().getLessonService().list();
-        call.enqueue(new Callback() {
-            @Override
-            public void onResponse(Call call, Response response) {
-                Log.i("Lesson resp: ", response.toString());
-
-            }
-
-            @Override
-            public void onFailure(Call call, Throwable t) {
-                Log.e("LECTS", "Erro na requisição");
-            }
-        });
     }
 
     @Override

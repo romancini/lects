@@ -3,19 +3,18 @@ package br.com.romancini.lects.model;
 import br.com.romancini.lects.model.types.UserType;
 
 public class User {
+    private String _id;
     private String login;
-    private String password;
     private UserType userType;
     private String userClass;
 
-    public User(String login, String password) {
-        this.login = login;
-        this.password = password;
+    public User() {
+        super();
     }
 
-    public User(String login, String password, UserType userType, String userClass) {
+    public User(String id, String login, UserType userType, String userClass) {
+        this._id = id;
         this.login = login;
-        this.password = password;
         this.userType = userType;
         this.userClass = userClass;
     }
@@ -30,5 +29,9 @@ public class User {
 
     public String getUserClass() {
         return userClass;
+    }
+
+    public String get_id() {
+        return _id;
     }
 }
