@@ -11,8 +11,8 @@ public class RetrofitInicializer {
 
     public RetrofitInicializer() {
         retrofit = new Retrofit.Builder()
-                //.baseUrl("https://lects.herokuapp.com/")
-                .baseUrl("http://10.0.2.2:3000/")
+                .baseUrl("https://lects.herokuapp.com/")
+                //.baseUrl("http://10.0.2.2:3000/")
                 .addConverterFactory(JacksonConverterFactory.create())
                 .build();
     }
