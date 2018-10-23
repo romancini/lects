@@ -1,5 +1,6 @@
 package br.com.romancini.lects.retrofit;
 
+import br.com.romancini.lects.services.LessonService;
 import br.com.romancini.lects.services.UserService;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
@@ -18,5 +19,9 @@ public class RetrofitInicializer {
 
     public UserService userService(){
         return retrofit.create(UserService.class);
+    }
+
+    public LessonService lessonService(){
+        return retrofit.create(LessonService.class);
     }
 }

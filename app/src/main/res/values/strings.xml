@@ -7,4 +7,12 @@
     <string name="entrar">Entrar</string>
     <string name="esqueci_minha_senha">Esqueci minha senha</string>
     <string name="clique_na_atividade_escolhida">Clique na atividade escolhida:</string>
+    <string name="REQUEST_ERROR">Erro no request</string>
+    <string name="VERIFY_EMAIL_PASS">Verifique usuário e senha</string>
+    <string name="TOKEN_HEADER_NAME">x-access-token</string>
+    <string name="LOGIN">Login</string>
+    <string name="ALERT">Aviso:</string>
+    <string name="ERROR">Erro:</string>
+    <string name="ERROR_REQUEST_LESSONS">Erro ao requisitar lições</string>
+    <string name="LESSONS">Lições</string>
 </resources>
