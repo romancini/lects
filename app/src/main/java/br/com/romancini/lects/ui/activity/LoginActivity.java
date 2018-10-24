@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccessful()) {
                     storeTokenRecieved(response.headers().get(getString(R.string.TOKEN_HEADER_NAME)));
                     Intent intent = new Intent(LoginActivity.this, SelectLessonActivity.class);
+                    intent.putExtra(getString(R.string.USER), response.getClass());
                     startActivity(intent);
                 } else {
                     Log.i(getString(R.string.LOGIN), getString(R.string.ALERT) + response.toString());

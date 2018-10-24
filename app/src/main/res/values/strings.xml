@@ -15,4 +15,5 @@
     <string name="ERROR">Erro:</string>
     <string name="ERROR_REQUEST_LESSONS">Erro ao requisitar lições</string>
     <string name="LESSONS">Lições</string>
+    <string name="USER">user</string>
 </resources>
